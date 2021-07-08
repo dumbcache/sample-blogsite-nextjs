@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css?family=Coiny");
+@import url("https://fonts.googleapis.com/css2?family=Vollkorn&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Frijole&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yatra+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    color: cornsilk;
+    background-color: #3d3b3b;
+    font-family: "source sans", sans-serif;
+}
+* {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/************************************************************
+################## Tech Component Styles  ###################
+*************************************************************/
+
+.header {
+    font-family: coiny;
+    color: white;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1 auto;
+    align-items: center;
+    background-color: #212121;
+    padding: 3%;
+    border-bottom: 1px ridge rgb(241, 220, 175);
+    > div {
+        flex: 1;
+    }
+}
+.title-container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    img {
+        width: 30%;
+        border-radius: 10%;
+    }
+    #title {
+        color: #e44d26;
+        // color: #deb49c;
+    }
+}
+
+.navigation-container {
+    display: flex;
+    color: #deb49c;
+    color: #eabd64;
+    div {
+        padding: 1em;
+    }
+    a:hover {
+        color: #78836c;
+    }
+}
+.social-container {
+    display: flex;
+    justify-content: space-evenly;
+    .social {
+        display: flex;
+    }
+}
+
+/************************************************************
+*   #   #   #   #   #   #   #   #   #   #   #   #   #   #   *
+*   #   #   #   #   #   #   #   #   #   #   #   #   #   #   *
+******************   Media Queries   ************************
+*   #   #   #   #   #   #   #   #   #   #   #   #   #   #   *
+*   #   #   #   #   #   #   #   #   #   #   #   #   #   #   *
+*************************************************************/
+
+@media (min-width: 300px) and (max-width: 800px) {
+    .header {
+        > div {
+            flex: auto;
+        }
+    }
+    .navigation-container > div {
+        padding: 1em 1em 1em 0em;
+    }
+    .social-container > div {
+        padding: 1em 0em 1em 0em;
+    }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 800px) and (orientation: landscape) {
+    .header {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        background-position: right;
+    }
+}
