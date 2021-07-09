@@ -9,7 +9,7 @@ const Header = () => {
         <>
             <header className="header">
                 <div className="title-container">
-                    <img src="/OPMan.png" alt="saitama" id="logo" />
+                    <img src="/OnePunchMan.jpg" alt="saitama" id="logo" />
                     <h1 id="title">Personal Page</h1>
                 </div>
                 <div className="navigation-container">

@@ -22,15 +22,12 @@ export default function Home() {
                         src="https://avatars.githubusercontent.com/u/50919263?v=4"
                     />
                     <div id="bio">
-                        <div>lorem</div>
-                        <div>age</div>
                         <div>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Dolorem nesciunt doloremque debitis cupiditate
-                            officiis. Modi hic, doloremque inventore distinctio
-                            molestias id ipsa est qui provident beatae eligendi
-                            assumenda numquam culpa.
+                            <h2 id="name">Yesu Babu .G</h2>
                         </div>
+                        <h3>age:22</h3>
+                        <h5>(fresher Developer)</h5>
+                        <div>"|------------- information --------------|"</div>
                     </div>
                 </div>
                 <div className="card-outercontainer">

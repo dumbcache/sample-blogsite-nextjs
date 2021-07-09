@@ -14,9 +14,12 @@ body {
     padding: 0;
     margin: 0;
     color: cornsilk;
-    background-color: #3d3b3b;
+    background-color: #2b2e2f;
     font-family: "source sans", sans-serif;
     box-sizing: border-box;
+}
+body::-webkit-scrollbar {
+    display: none;
 }
 *,
 *::before,
@@ -42,9 +45,11 @@ a {
     flex: 1 auto;
     align-items: center;
     background-color: #212121;
-    box-shadow: 0px 2px 1px rgb(73, 70, 70);
+    background-image: url("/pacman.png");
+    // background-size: cover;
+    background-position: top;
 
-    // border-bottom: 1px ridge rgb(223, 219, 212);
+    box-shadow: 0px 2px 1px rgb(73, 70, 70);
     z-index: 1;
 
     > div {
@@ -91,10 +96,11 @@ a {
     }
 }
 .cover {
-    height: 40vh;
-    background-image: url("/cover.jpg");
+    height: 50vh;
+    background-image: url("/pacman.png");
     background-position: center;
-    filter: blur(3px);
+    background-size: cover;
+    filter: blur(1px);
     overflow: hidden;
     box-shadow: 0px 10px 5px rgb(3, 3, 3);
 }
@@ -109,13 +115,24 @@ a {
     }
     #bio {
         margin: auto;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
         position: relative;
-        top: -50px;
+        top: -90px;
         width: 70vw;
+        font-family: "Poiret One", sans-serif;
+        h2,
+        h3,
+        h5 {
+            margin: 5px;
+        }
+        #name {
+        }
     }
 }
 .card-outercontainer {
-    background-color: #2b2e2f;
+    background-color: #3d3b3b;
 }
 .card-innercontainer {
     background-color: #3d4246;
@@ -129,18 +146,23 @@ a {
         align-items: center;
         justify-content: center;
         margin: 1em 1em 0em 1em;
-        // width: 10%;
+        width: 10%;
         height: 15vh;
+        transition: width 2s 2s;
     }
 
     > :nth-child(odd) {
-        background-color: rgb(16, 16, 47);
+        background-color: #812a75;
     }
 
     > :nth-child(even) {
-        background-color: rgb(75, 70, 67);
+        background-color: rgb(21, 91, 104);
     }
 }
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 /************************************************************
 *   #   #   #   #   #   #   #   #   #   #   #   #   #   #   *
 *   #   #   #   #   #   #   #   #   #   #   #   #   #   #   *
