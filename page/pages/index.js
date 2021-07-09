@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
+import { TechData } from "../ui/Data";
 
 export default function Home() {
     return (
@@ -13,7 +13,34 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <main></main>
+            <main>
+                <div className="cover"></div>
+                <div className="profile-container">
+                    <img
+                        id="profile"
+                        alt="profile"
+                        src="https://avatars.githubusercontent.com/u/50919263?v=4"
+                    />
+                    <div id="bio">
+                        <div>lorem</div>
+                        <div>age</div>
+                        <div>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Dolorem nesciunt doloremque debitis cupiditate
+                            officiis. Modi hic, doloremque inventore distinctio
+                            molestias id ipsa est qui provident beatae eligendi
+                            assumenda numquam culpa.
+                        </div>
+                    </div>
+                </div>
+                <div className="card-outercontainer">
+                    <div className="card-innercontainer">
+                        {TechData.map((card) => (
+                            <div className={card.id}>{card.data}</div>
+                        ))}
+                    </div>
+                </div>
+            </main>
         </>
     );
 }

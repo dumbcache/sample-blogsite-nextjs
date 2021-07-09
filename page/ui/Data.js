@@ -11,32 +11,53 @@ import TwitterIcon from "@material-ui/icons/Twitter";
 
 export const TechData = [
     {
-        id: 1,
-        icon: HCJ,
-        data: "Frontend data",
-        alt: "Frontend",
-        url: "https://developer.mozilla.org/en-US/docs/Web",
-    },
-    {
         id: 2,
         icon: Docker,
-        data: "Docker data",
+        data: "Docker",
         alt: "Docker",
         url: "https://www.docker.com/",
     },
     {
         id: 3,
         icon: Mongodb,
-        data: "Mongodb data",
+        data: "Mongodb",
         alt: "Mongodb",
         url: "https://www.mongodb.com/",
     },
     {
         id: 4,
         icon: React,
-        data: "React data",
+        data: "React",
         alt: "React",
         url: "https://reactjs.org/",
+    },
+    {
+        id: 5,
+        data: "aws",
+    },
+    {
+        id: 6,
+        data: "git",
+    },
+    {
+        id: 7,
+        data: "python",
+    },
+    {
+        id: 8,
+        data: "nextJS",
+    },
+    {
+        id: 9,
+        data: "JavaScript",
+    },
+    {
+        id: 10,
+        data: "html",
+    },
+    {
+        id: 11,
+        data: "css",
     },
 ];
 
