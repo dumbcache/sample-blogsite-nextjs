@@ -14,13 +14,14 @@ export default function Home() {
             </Head>
 
             <main>
-                <div className="cover"></div>
-                <div className="profile-container">
+                <div className="cover">
                     <img
                         id="profile"
                         alt="profile"
                         src="https://avatars.githubusercontent.com/u/50919263?v=4"
                     />
+                </div>
+                <div className="profile-container">
                     <div id="bio">
                         <div>
                             <h2 id="name">Yesu Babu .G</h2>
