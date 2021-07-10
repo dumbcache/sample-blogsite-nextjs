@@ -27,13 +27,15 @@ export default function Home() {
                         </div>
                         <h3>age:22</h3>
                         <h5>(fresher Developer)</h5>
-                        <div>"|------------- information --------------|"</div>
+                        <div>"|------ information ------|"</div>
                     </div>
                 </div>
                 <div className="card-outercontainer">
                     <div className="card-innercontainer">
                         {TechData.map((card) => (
-                            <div className={card.id}>{card.data}</div>
+                            <div key={TechData.id} className={card.id}>
+                                {card.data}
+                            </div>
                         ))}
                     </div>
                 </div>

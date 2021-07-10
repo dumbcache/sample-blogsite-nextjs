@@ -15,8 +15,7 @@ body {
     margin: 0;
     color: cornsilk;
     background-color: #2b2e2f;
-    font-family: "source sans", sans-serif;
-    box-sizing: border-box;
+    font-family: "Poiret One", sans-serif;
 }
 body::-webkit-scrollbar {
     display: none;
@@ -45,7 +44,7 @@ a {
     flex: 1 auto;
     align-items: center;
     background-color: #212121;
-    background-image: url("/wallpaper.jpg");
+    background-image: url("/pacman.png");
     // background-size: cover;
     background-position: top;
 
@@ -62,14 +61,14 @@ a {
     align-items: center;
 
     img {
-        width: 30%;
+        width: 35%;
         padding: 0.5em;
         border-radius: 30%;
     }
 
     #title {
-        color: #e44d26;
-        text-shadow: -1px 1px rgb(24, 194, 151);
+        color: #e88156;
+        text-shadow: -1px 1px #f3bb26;
     }
 }
 
@@ -83,6 +82,7 @@ a {
     }
     a {
         padding: 1em 0em;
+        padding-left: 1em;
     }
     a:hover {
         color: #78836c;
@@ -96,11 +96,11 @@ a {
     }
 }
 .cover {
-    height: 50vh;
+    height: 40vh;
     background-image: url("/pacman.png");
     background-position: center;
     background-size: cover;
-    filter: blur(1px);
+    // filter: blur(1px);
     overflow: hidden;
     box-shadow: 0px 10px 5px rgb(3, 3, 3);
 }
@@ -115,6 +115,7 @@ a {
     }
     #bio {
         margin: auto;
+        background-color: #141414;
         display: flex;
         flex-flow: column wrap;
         align-items: center;
@@ -132,12 +133,13 @@ a {
     }
 }
 .card-outercontainer {
+    font-weight: bold;
     background-color: #3d3b3b;
 }
 .card-innercontainer {
     background-color: #3d4246;
-    width: 70%;
-    margin: auto;
+    width: auto;
+    margin: 10%;
     display: flex;
     flex-flow: row wrap;
     > div {
@@ -146,9 +148,9 @@ a {
         align-items: center;
         justify-content: center;
         margin: 1em 1em 0em 1em;
-        width: 10%;
+        width: 15%;
         height: 15vh;
-        transition: width 2s 2s;
+        border-radius: 10%;
     }
 
     > :nth-child(odd) {
@@ -171,18 +173,95 @@ a {
 *   #   #   #   #   #   #   #   #   #   #   #   #   #   #   *
 *************************************************************/
 
-@media (min-width: 300px) and (max-width: 500px) {
+@media (min-width: 300px) and (max-width: 700px) {
     .header {
         flex-flow: row wrap;
         > div {
             flex: auto;
         }
     }
+
+    .title-container {
+        img {
+            width: 25%;
+            border-radius: 30%;
+        }
+
+        #title {
+        }
+    }
+
     .navigation-container > div {
         padding: 1em 1em 1em 0em;
     }
     .social-container > div {
         padding: 1em 0em 1em 0em;
+    }
+
+    .card-innercontainer {
+        background-color: #3d4246;
+        width: auto;
+        margin: 1em;
+        display: flex;
+        flex-flow: row wrap;
+        > div {
+            flex: 1 25%;
+            margin: 0.5em 0.5em 0em 0.5em;
+            width: 15vw;
+            height: 10vh;
+            transition: width 2s 2s;
+            border-radius: 10%;
+        }
+
+        > :nth-child(odd) {
+            background-color: #000000;
+        }
+
+        > :nth-child(even) {
+            background-color: #141414;
+        }
+    }
+}
+@media only screen and (min-width: 300px) and (max-width: 330px) {
+    .header {
+        flex-flow: column;
+
+        .title-container {
+            img {
+                width: 30%;
+                // padding: 0.5em;
+                border-radius: 30%;
+            }
+
+            #title {
+                margin: 0;
+            }
+        }
+        .navigation-container {
+            div {
+                padding: 0.5em;
+            }
+            a {
+                padding: 0.5em 0em;
+                padding-right: 1em;
+            }
+            a:hover {
+                color: #78836c;
+            }
+        }
+        .social-container > div {
+            padding: 0.5em 0.5em;
+        }
+    }
+    .card-innercontainer {
+        > div {
+            flex: 1 25%;
+            // margin: 0.5em 0.5em 0em 0.5em;
+            width: 55vw;
+            height: 10vh;
+            transition: width 2s 2s;
+            border-radius: 10%;
+        }
     }
 }
 
