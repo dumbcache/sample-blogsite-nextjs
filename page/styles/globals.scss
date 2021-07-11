@@ -2,23 +2,23 @@
     font-family: "Poiret One";
     src: local("Poiret One"), url(/fonts/PoiretOne-Regular.ttf);
 }
-@font-face {
-    font-family: "Architects Daughter";
-    src: local("Architects Daughter"),
-        url(/fonts/ArchitectsDaughter-Regular.ttf);
-}
-@font-face {
-    font-family: "Coiny";
-    src: local("Coiny"), url(/fonts/Coiny-Regular.ttf);
-}
-@font-face {
-    font-family: "Vollkorn";
-    src: local("Vollkorn"), url(/fonts/Vollkorn-VariableFont_wght.ttf);
-}
-@font-face {
-    font-family: "Yatra One";
-    src: local("Yatra One"), url(/fonts/YatraOne-Regular.ttf);
-}
+// @font-face {
+//     font-family: "Architects Daughter";
+//     src: local("Architects Daughter"),
+//         url(/fonts/ArchitectsDaughter-Regular.ttf);
+// }
+// @font-face {
+//     font-family: "Coiny";
+//     src: local("Coiny"), url(/fonts/Coiny-Regular.ttf);
+// }
+// @font-face {
+//     font-family: "Vollkorn";
+//     src: local("Vollkorn"), url(/fonts/Vollkorn-VariableFont_wght.ttf);
+// }
+// @font-face {
+//     font-family: "Yatra One";
+//     src: local("Yatra One"), url(/fonts/YatraOne-Regular.ttf);
+// }
 html,
 body {
     padding: 0;
@@ -128,29 +128,37 @@ a {
 .profile-container {
     #bio {
         margin: auto;
-        margin-top: 120px;
-        margin-bottom: 5%;
+        margin-top: 110px;
+        margin-bottom: 2%;
+        padding: 1em;
         background-color: #141414;
         display: flex;
         flex-flow: column wrap;
         align-items: center;
-        width: 70vw;
-        font-family: "Poiret One", sans-serif;
+        width: 80vw;
+        font-family: "Poiret One";
         h2,
         h3,
         h5 {
+            color: darkturquoise;
             margin: 5px;
+            text-align: center;
         }
         #name {
+            color: #18b118;
+        }
+        p {
+            margin: 0;
+            text-align: center;
         }
     }
 }
 .card-outercontainer {
     font-weight: bold;
-    background-color: #3d3b3b;
+    // background-color: #3d3b3b;
 }
 .card-innercontainer {
-    background-color: #3d4246;
+    // background-color: #3d4246;
     width: auto;
     margin: 0em 10%;
     display: flex;
@@ -160,19 +168,48 @@ a {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 1em 1em 0em 1em;
+        margin: 1em 1em 0.5em 1em;
         width: 15%;
         height: 15vh;
         border-radius: 10%;
     }
 
     > :nth-child(odd) {
-        background-color: #812a75;
+        background-color: #893058;
     }
 
     > :nth-child(even) {
-        background-color: rgb(21, 91, 104);
+        background-color: #576194;
     }
+}
+.contact-container {
+    #contact {
+        padding: 2em;
+        margin: 2em auto;
+        background-color: #56387a;
+        font-weight: bold;
+        width: 80vw;
+        h4 {
+            margin: 0;
+        }
+        form {
+            padding: 1em;
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+            justify-content: space-around;
+            button {
+                width: fit-content;
+            }
+        }
+        form > * {
+            margin-bottom: 0.5em;
+        }
+    }
+}
+.footer {
+    height: 30vh;
+    background-color: cadetblue;
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -199,12 +236,9 @@ a {
             width: 15%;
             border-radius: 30%;
         }
-
-        #title {
-        }
     }
+
     .cover {
-        // background-size: ;
         height: 30vh;
         #profile {
             width: 40%;
@@ -217,9 +251,15 @@ a {
     .social-container > div {
         padding: 1em 0em 1em 0em;
     }
+    .profile-container {
+        #bio {
+            width: 90vw;
+            margin-top: 22%;
+            margin-bottom: 5%;
+        }
+    }
 
     .card-innercontainer {
-        background-color: #3d4246;
         width: auto;
         margin: 1em;
         display: flex;
@@ -233,14 +273,31 @@ a {
         }
 
         > :nth-child(odd) {
-            background-color: #000000;
+            background-color: rgb(21, 91, 104);
         }
 
         > :nth-child(even) {
-            background-color: #141414;
+            background-color: #812a75;
+        }
+    }
+
+    .contact-container {
+        #contact {
+            padding: 0.5em;
+            margin: 2em auto;
+            width: 90vw;
+
+            form {
+                padding: 0.5em;
+                display: flex;
+                flex-flow: column wrap;
+                align-items: center;
+                justify-content: space-around;
+            }
         }
     }
 }
+
 @media only screen and (min-width: 0px) and (max-width: 330px) {
     .header {
         flex-flow: column;
@@ -248,7 +305,6 @@ a {
         .title-container {
             img {
                 width: 30%;
-                // padding: 0.5em;
                 border-radius: 30%;
             }
 
@@ -279,6 +335,16 @@ a {
             border-radius: 50%;
         }
     }
+    h4 {
+        margin: 0;
+    }
+    .profile-container {
+        #bio {
+            width: 90vw;
+            margin-top: 20%;
+            margin-bottom: 5%;
+        }
+    }
     .card-innercontainer {
         > div {
             flex: 1 25%;
@@ -294,6 +360,21 @@ a {
 
         > :nth-child(even) {
             background-color: #18b118;
+        }
+    }
+    .contact-container {
+        #contact {
+            padding: 0.3em;
+            margin: 2em auto;
+            width: 90vw;
+
+            form {
+                padding: 0em;
+                display: flex;
+                flex-flow: column wrap;
+                align-items: center;
+                justify-content: space-around;
+            }
         }
     }
 }
