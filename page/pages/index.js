@@ -31,8 +31,8 @@ export default function Home() {
                         <p>|--------- Bio ---------|</p>
                         <p>
                             <i>
-                                ``` May be a fresher but will be pro in no time
-                                ```
+                                ``` May be a fresher but will be professional in
+                                no time ```
                             </i>
                         </p>
                         <ul>
@@ -43,6 +43,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="card-outercontainer">
+                    <h4 className="skills">Tech Knowledge</h4>
                     <div className="card-innercontainer">
                         {TechData.map((card) => (
                             <div key={TechData.id} className={card.id}>

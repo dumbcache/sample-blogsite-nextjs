@@ -1,3 +1,5 @@
+// @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
 @font-face {
     font-family: "Poiret One";
     src: local("Poiret One"), url(/fonts/PoiretOne-Regular.ttf);
@@ -155,7 +157,12 @@ a {
 }
 .card-outercontainer {
     font-weight: bold;
+    display: flex;
+    flex-flow: column;
     // background-color: #3d3b3b;
+    .skills {
+        margin: auto;
+    }
 }
 .card-innercontainer {
     // background-color: #3d4246;
@@ -179,14 +186,14 @@ a {
     }
 
     > :nth-child(even) {
-        background-color: #576194;
+        background-color: #3a478a;
     }
 }
 .contact-container {
     #contact {
         padding: 2em;
         margin: 2em auto;
-        background-color: #56387a;
+        background-color: #2d4e80;
         font-weight: bold;
         width: 80vw;
         h4 {
@@ -200,6 +207,12 @@ a {
             justify-content: space-around;
             button {
                 width: fit-content;
+            }
+            input,
+            textarea,
+            button {
+                font-family: inherit;
+                font-weight: bold;
             }
         }
         form > * {
