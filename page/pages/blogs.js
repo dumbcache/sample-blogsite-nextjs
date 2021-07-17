@@ -8,5 +8,13 @@ const blogs = () => {
         </main>
     );
 };
+export const getServerSideProps = async () => {
+    console.log(process.env);
+    console.log(process.cwd());
+
+    return {
+        props: {},
+    };
+};
 
 export default blogs;

@@ -190,34 +190,16 @@ a {
     }
 }
 .contact-container {
-    #contact {
-        padding: 2em;
-        margin: 2em auto;
-        background-color: #2d4e80;
-        font-weight: bold;
-        width: 80vw;
-        h4 {
-            margin: 0;
-        }
-        form {
-            padding: 1em;
-            display: flex;
-            flex-flow: column wrap;
-            align-items: center;
-            justify-content: space-around;
-            button {
-                width: fit-content;
-            }
-            input,
-            textarea,
-            button {
-                font-family: inherit;
-                font-weight: bold;
-            }
-        }
-        form > * {
-            margin-bottom: 0.5em;
-        }
+    padding: 2rem;
+    margin: 2rem auto;
+    background-color: #ffffff;
+    font-weight: bold;
+    width: 80vw;
+    .form {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        background-color: rgb(95, 159, 170);
     }
 }
 .footer {

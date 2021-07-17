@@ -2,7 +2,6 @@ import React from "react";
 import Link from "next/link";
 import { ProfileData } from "./Data";
 import ProfileIcon from "./ProfileIcon";
-import saitama from "../assets/onePunchMan.jpg";
 
 const Header = () => {
     return (

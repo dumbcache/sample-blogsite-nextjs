@@ -1,5 +1,7 @@
 import Head from "next/head";
-import { TechData } from "../ui/Data";
+import Profile from "../ui/Profile";
+import Contact from "../ui/Contact";
+import Card from "../ui/Card";
 
 export default function Home() {
     return (
@@ -14,82 +16,9 @@ export default function Home() {
             </Head>
 
             <main>
-                <div className="cover">
-                    <img
-                        id="profile"
-                        alt="profile"
-                        src="https://avatars.githubusercontent.com/u/50919263?v=4"
-                    />
-                </div>
-                <div className="profile-container">
-                    <div id="bio">
-                        <div>
-                            <h2 id="name">Yesu Babu .G</h2>
-                        </div>
-                        <h3>age:22</h3>
-                        <h5>(Full-stack Developer)</h5>
-                        <p>|--------- Bio ---------|</p>
-                        <p>
-                            <i>
-                                ``` May be a fresher but will be professional in
-                                no time ```
-                            </i>
-                        </p>
-                        <ul>
-                            <li>loves cricket</li>
-                            <li>watching anime &#128512;</li>
-                            <li>music</li>
-                        </ul>
-                    </div>
-                </div>
-                <div className="card-outercontainer">
-                    <h4 className="skills">Tech Knowledge</h4>
-                    <div className="card-innercontainer">
-                        {TechData.map((card) => (
-                            <div key={TechData.id} className={card.id}>
-                                {card.data}
-                            </div>
-                        ))}
-                    </div>
-                </div>
-                <div className="contact-container">
-                    <div id="contact">
-                        <fieldset>
-                            <legend>
-                                <h4>ContactMe</h4>
-                            </legend>
-                            <form action="#">
-                                <label htmlFor="name">name</label>
-                                <input
-                                    type="text"
-                                    id="name"
-                                    placeholder="enter your name"
-                                />
-                                <label htmlFor="email">email</label>
-                                <input
-                                    type="email"
-                                    id="email"
-                                    placeholder="enter your email"
-                                />
-                                <label htmlFor="phone">phone number</label>
-                                <input
-                                    type="number"
-                                    id="phone"
-                                    placeholder="enter your number"
-                                />
-                                <label htmlFor="message">message</label>
-                                <textarea
-                                    name="message"
-                                    id="message"
-                                    cols=""
-                                    rows=""
-                                    placeholder="enter your message"
-                                ></textarea>
-                                <button>send</button>
-                            </form>
-                        </fieldset>
-                    </div>
-                </div>
+                <Profile />
+                <Card />
+                <Contact />
                 <div className="footer"></div>
             </main>
         </>
