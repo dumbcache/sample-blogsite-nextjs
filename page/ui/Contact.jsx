@@ -5,16 +5,24 @@ import { makeStyles } from "@material-ui/core/styles";
 import SendIcon from "@material-ui/icons/Send";
 import { Field, Form, Formik, ErrorMessage, useField } from "formik";
 import * as yup from "yup";
-import Link from "next/link";
+
+import { createTheme, ThemeProvider } from "@material-ui/core/styles";
+import deepOrange from "@material-ui/core/colors/deepOrange";
+import green from "@material-ui/core/colors/green";
+
+const theme = createTheme({
+    palette: {
+        primary: {
+            main: deepOrange[500],
+        },
+    },
+});
 
 const useStyles = makeStyles((theme) => ({
     root: {
         "& *": {
             fontFamily: "inherit",
             marginBottom: "0.1rem",
-        },
-        "& .MuiFilledInput-root": {
-            background: "rgb(232, 241, 250)",
         },
         "& label ": {
             fontFamily: "inherit",
@@ -24,14 +32,12 @@ const useStyles = makeStyles((theme) => ({
 
         "& input,textarea": {
             color: "white",
+            fontSize: "0.9rem",
         },
         "& textarea:focus,input:focus": {
             backgroundColor: "#2B2E2F",
         },
         "& input:hover,textarea:hover": {},
-    },
-    input: {
-        background: "inherit",
     },
     focused: {},
 }));
@@ -41,19 +47,21 @@ const MyTextField = ({ label, required, multiline, ...props }) => {
     const [field, meta] = useField(props);
     const errorText = meta.error && meta.touched ? meta.error : "";
     return (
-        <TextField
-            {...field}
-            label={label}
-            helperText={errorText}
-            error={!!errorText}
-            size="small"
-            color="secondary"
-            required={required}
-            multiline={multiline || false}
-            maxRows={3}
-            variant="outlined"
-            InputProps={{ className: classes.input }}
-        />
+        <ThemeProvider theme={theme}>
+            <TextField
+                {...field}
+                className={classes.root}
+                label={label}
+                helperText={errorText}
+                error={!!errorText}
+                size="small"
+                color="primary"
+                required={required}
+                multiline={multiline || false}
+                maxRows={3}
+                variant="filled"
+            />
+        </ThemeProvider>
     );
 };
 
