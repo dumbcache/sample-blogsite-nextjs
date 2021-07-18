@@ -1,8 +1,9 @@
-import React from "react";
+import React,{useState} from "react";
 import TextField from "@material-ui/core/TextField";
 import { Button, Checkbox } from "@material-ui/core";
 import { Field, Form, Formik, ErrorMessage, useField } from "formik";
 import * as yup from "yup";
+import Link from "next/link";
 
 const MyTextField = ({ label, required, multiline, ...props }) => {
     const [field, meta] = useField(props);
@@ -22,6 +23,7 @@ const MyTextField = ({ label, required, multiline, ...props }) => {
 };
 
 const Contact = () => {
+    let [mailStatus,setMailStatus]=useState('');
     return (
         <div className="contact-container">
             <Formik
@@ -34,18 +36,28 @@ const Contact = () => {
                 validate={(values) => {
                     const errors = {};
                     if (values.name.includes("yesu")) {
-                        errors.name = "no yesu";
+                        // errors.name = "no yesu";
                     }
                     return errors;
                 }}
-                onSubmit={(data, { setSubmitting }) => {
-                    // setSubmitting(false);
-                    // const request = await fetch('/')
+                onSubmit={(data, { setSubmitting ,resetForm}) => {
+                    (async ()=>{
+                    const request = await fetch('/api/mail',
+                    {
+                        method:"POST",
+                        headers: {
+                          'Content-Type': 'application/json'
+                        },
+                        body:JSON.stringify(data)
+                    });
+                    const response = await request.text();
+                    setMailStatus(response);
+                    setSubmitting(false);
                     setTimeout(() => {
-                        console.log(JSON.stringify(data, null, 2));
-                        setSubmitting(false);
-                    }, 400);
-                    setSubmitting(true);
+                    resetForm();
+                       setMailStatus(""); 
+                    }, 2000);
+                    })();
                 }}
                 validationSchema={yup.object({
                     name: yup.string(),
@@ -55,6 +67,7 @@ const Contact = () => {
                 })}
             >
                 {({ values, isSubmitting }) => (
+                    
                     <Form className="form">
                         <div>
                             <MyTextField
@@ -92,7 +105,8 @@ const Contact = () => {
                         >
                             send
                         </Button>
-                        <pre>{JSON.stringify(values, null, 2)}</pre>
+                        <pre>{mailStatus}</pre>
+                       
                     </Form>
                 )}
             </Formik>
