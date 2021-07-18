@@ -25,7 +25,7 @@ html,
 body {
     padding: 0;
     margin: 0;
-    color: cornsilk;
+    color: rgb(255, 255, 255);
     background-color: #2b2e2f;
     font-family: "Poiret One";
 }
@@ -61,7 +61,7 @@ a {
     background-position: top;
 
     box-shadow: 0px 2px 1px rgb(73, 70, 70);
-    z-index: 1;
+    z-index: 10;
 
     > div {
         flex: 1;
@@ -186,21 +186,43 @@ a {
     }
 
     > :nth-child(even) {
-        background-color: #3a478a;
+        background-color: #5469d4;
     }
 }
 .contact-container {
     padding: 2rem;
     margin: 2rem auto;
-    background-color: #ffffff;
+    background-color: #212121;
+    font-family: inherit;
     font-weight: bold;
     width: 80vw;
-    .form {
+    h4 {
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+    form {
         display: flex;
         flex-flow: column;
         align-items: center;
-        background-color: rgb(95, 159, 170);
-        
+        font-family: inherit;
+        // background-color: rgb(95, 159, 170);
+        // * {
+        //     margin-bottom: 0.1rem;
+        //     color: inherit;
+        // }
+    }
+
+    .button {
+        font-family: inherit;
+        font-weight: bold;
+        background-color: #50a9af;
+        color: #fff;
+        box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11),
+            0 1px 3px rgba(0, 0, 0, 0.08);
+        text-transform: inherit;
+    }
+    .button:hover {
+        background-color: #5469d4;
     }
 }
 .footer {

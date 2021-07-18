@@ -15,7 +15,7 @@ const accessToken = oauth2Client.getAccessToken();
 export default async (req, res) => {
     // console.log(req.body);
     let data = req.body;
-    var smtpTransport = nodemailer.createTransport({
+    var Transport = nodemailer.createTransport({
         service: "gmail",
         host: "smtp.gmail.com",
         port: 2525,
@@ -44,7 +44,7 @@ export default async (req, res) => {
             </div>
         </div>`,
     };
-    smtpTransport.sendMail(mailOptions, (error, info) => {
+    Transport.sendMail(mailOptions, (error, info) => {
         if (error) {
             console.log(error);
             res.status(500).send("internal error....please try again later");
@@ -52,6 +52,6 @@ export default async (req, res) => {
             console.log("Message sent: %s", info.messageId);
             res.status(200).send("message sent successfully");
         }
-        smtpTransport.close();
+        Transport.close();
     });
 };
