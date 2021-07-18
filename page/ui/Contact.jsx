@@ -13,6 +13,9 @@ const useStyles = makeStyles((theme) => ({
             fontFamily: "inherit",
             marginBottom: "0.1rem",
         },
+        "& .MuiFilledInput-root": {
+            background: "rgb(232, 241, 250)",
+        },
         "& label ": {
             fontFamily: "inherit",
             color: "#63A814",
@@ -25,14 +28,16 @@ const useStyles = makeStyles((theme) => ({
         "& textarea:focus,input:focus": {
             backgroundColor: "#2B2E2F",
         },
-        "& input:hover,textarea:hover": {
-            // borderRight: "1px solid red",
-        },
+        "& input:hover,textarea:hover": {},
+    },
+    input: {
+        background: "inherit",
     },
     focused: {},
 }));
 
 const MyTextField = ({ label, required, multiline, ...props }) => {
+    const classes = useStyles();
     const [field, meta] = useField(props);
     const errorText = meta.error && meta.touched ? meta.error : "";
     return (
@@ -46,7 +51,8 @@ const MyTextField = ({ label, required, multiline, ...props }) => {
             required={required}
             multiline={multiline || false}
             maxRows={3}
-            // variant="outlined"
+            variant="outlined"
+            InputProps={{ className: classes.input }}
         />
     );
 };
