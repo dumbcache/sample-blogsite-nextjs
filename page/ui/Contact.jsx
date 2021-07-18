@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import TextField from "@material-ui/core/TextField";
 import { Button, Checkbox } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import SendIcon from "@material-ui/icons/Send";
 import { Field, Form, Formik, ErrorMessage, useField } from "formik";
 import * as yup from "yup";
 import Link from "next/link";
@@ -18,20 +19,14 @@ const useStyles = makeStyles((theme) => ({
             fontWeight: "bold",
         },
 
-        "& input": {
+        "& input,textarea": {
             color: "white",
         },
-        "& textarea": {
-            color: "white",
-        },
-        "& textarea:focus": {
+        "& textarea:focus,input:focus": {
             backgroundColor: "#2B2E2F",
         },
-        "& input:focus": {
-            backgroundColor: "#2B2E2F",
-        },
-        "& input:hover": {
-            // backgroundColor: "blue",
+        "& input:hover,textarea:hover": {
+            // borderRight: "1px solid red",
         },
     },
     focused: {},
@@ -91,7 +86,7 @@ const Contact = () => {
                         setTimeout(() => {
                             resetForm();
                             setMailStatus("");
-                        }, 2000);
+                        }, 1000);
                     })();
                 }}
                 validationSchema={yup.object({
@@ -135,9 +130,10 @@ const Contact = () => {
                         <Button
                             className="button"
                             disabled={isSubmitting}
-                            color="primary"
                             type="submit"
                             size="small"
+                            endIcon={<SendIcon />}
+                            variant="contained"
                         >
                             send
                         </Button>

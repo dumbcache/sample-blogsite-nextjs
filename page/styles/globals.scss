@@ -190,26 +190,18 @@ a {
     }
 }
 .contact-container {
-    padding: 2rem;
-    margin: 2rem auto;
+    padding: 1rem;
+    margin: 1rem auto;
     background-color: #212121;
     font-family: inherit;
     font-weight: bold;
     width: 80vw;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
     h4 {
-        margin-bottom: 0.5rem;
+        margin: 1rem 0;
         text-align: center;
-    }
-    form {
-        display: flex;
-        flex-flow: column;
-        align-items: center;
-        font-family: inherit;
-        // background-color: rgb(95, 159, 170);
-        // * {
-        //     margin-bottom: 0.1rem;
-        //     color: inherit;
-        // }
     }
 
     .button {
@@ -300,19 +292,7 @@ a {
     }
 
     .contact-container {
-        #contact {
-            padding: 0.5em;
-            margin: 2em auto;
-            width: 90vw;
-
-            form {
-                padding: 0.5em;
-                display: flex;
-                flex-flow: column wrap;
-                align-items: center;
-                justify-content: space-around;
-            }
-        }
+        width: 90vw;
     }
 }
 
@@ -381,19 +361,7 @@ a {
         }
     }
     .contact-container {
-        #contact {
-            padding: 0.3em;
-            margin: 2em auto;
-            width: 90vw;
-
-            form {
-                padding: 0em;
-                display: flex;
-                flex-flow: column wrap;
-                align-items: center;
-                justify-content: space-around;
-            }
-        }
+        width: 90vw;
     }
 }
 
