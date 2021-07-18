@@ -19,7 +19,6 @@ export default function Home() {
                 <Profile />
                 <Card />
                 <Contact />
-                <div className="footer"></div>
             </main>
         </>
     );
