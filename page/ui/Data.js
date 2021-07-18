@@ -1,8 +1,3 @@
-// import HCJ from "../assets/hcj-icon.png";
-// import Docker from "../assets/docker-icon.png";
-// import Mongodb from "../assets/mongodb-icon.png";
-// import React from "../assets/React-icon.svg";
-
 import GitHubIcon from "@material-ui/icons/GitHub";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
