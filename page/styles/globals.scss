@@ -199,9 +199,13 @@ a {
     display: flex;
     flex-flow: column;
     align-items: center;
+
     h4 {
         margin: 1rem 0;
         text-align: center;
+    }
+    form {
+        width: 50%;
     }
 
     .button {
@@ -291,6 +295,9 @@ a {
 
     .contact-container {
         width: 90vw;
+        form {
+            width: 80%;
+        }
     }
 }
 
@@ -360,6 +367,9 @@ a {
     }
     .contact-container {
         width: 90vw;
+        form {
+            width: 90%;
+        }
     }
 }
 

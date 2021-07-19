@@ -59,7 +59,8 @@ const MyTextField = ({ label, required, multiline, ...props }) => {
                 required={required}
                 multiline={multiline || false}
                 maxRows={3}
-                variant="filled"
+                style={{ width: "100%" }}
+                // variant="filled"
             />
         </ThemeProvider>
     );
@@ -146,7 +147,11 @@ const Contact = () => {
                             disabled={isSubmitting}
                             type="submit"
                             size="small"
-                            endIcon={<SendIcon />}
+                            endIcon={
+                                <SendIcon
+                                    style={{ fontSize: 15, marginTop: "0.3em" }}
+                                />
+                            }
                             variant="contained"
                         >
                             send
