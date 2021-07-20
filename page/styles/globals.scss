@@ -26,7 +26,8 @@ body {
     padding: 0;
     margin: 0;
     color: rgb(255, 255, 255);
-    background-color: #2b2e2f;
+    // background-color: #2b2e2f;
+    background-color: #212121;
     font-family: "Poiret One";
 }
 body::-webkit-scrollbar {
@@ -182,17 +183,18 @@ a {
     }
 
     > :nth-child(odd) {
-        background-color: #893058;
+        background-color: #871b42;
     }
 
     > :nth-child(even) {
-        background-color: #5469d4;
+        background-color: #3b345bbb;
     }
 }
 .contact-container {
     padding: 1rem;
-    margin: 0.5rem auto;
-    background-color: #212121;
+    margin: 1rem auto;
+    // background-color: #212121;
+    background-color: #141414;
     font-family: inherit;
     font-weight: bold;
     width: 80vw;
@@ -206,22 +208,23 @@ a {
     }
     form {
         width: 50%;
+        text-align: center;
     }
 
     .button {
         font-family: inherit;
         font-weight: bold;
-        background-color: #50a9af;
-        color: #fff;
+        // background-color: #50a9af;
+        // color: #fff;
         box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11),
             0 1px 3px rgba(0, 0, 0, 0.08);
         text-transform: inherit;
         margin-top: 0.5rem;
         width: 100%;
     }
-    .button:hover {
-        background-color: #5469d4;
-    }
+    // .button:hover {
+    //     background-color: #5469d4;
+    // }
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////

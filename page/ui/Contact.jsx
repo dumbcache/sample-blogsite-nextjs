@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import TextField from "@material-ui/core/TextField";
-import { Button, Checkbox } from "@material-ui/core";
+import { Button, ButtonGroup, Checkbox } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import SendIcon from "@material-ui/icons/Send";
-import { Field, Form, Formik, ErrorMessage, useField } from "formik";
+import ClearAllIcon from "@material-ui/icons/ClearAll";
+import { Form, Formik, useField } from "formik";
 import * as yup from "yup";
 
 import { createTheme, ThemeProvider } from "@material-ui/core/styles";
@@ -37,7 +38,9 @@ const useStyles = makeStyles((theme) => ({
         "& textarea:focus,input:focus": {
             backgroundColor: "#2B2E2F",
         },
-        "& input:hover,textarea:hover": {},
+        "& input:hover,textarea:hover": {
+            borderRight: "1px solid red",
+        },
     },
     focused: {},
 }));
@@ -142,20 +145,42 @@ const Contact = () => {
                                 multiline={true}
                             />
                         </div>
-                        <Button
-                            className="button"
+                        <ButtonGroup
                             disabled={isSubmitting}
-                            type="submit"
                             size="small"
-                            endIcon={
-                                <SendIcon
-                                    style={{ fontSize: 15, marginTop: "0.3em" }}
-                                />
-                            }
                             variant="contained"
                         >
-                            send
-                        </Button>
+                            <Button
+                                className="button"
+                                type="submit"
+                                color="primary"
+                                endIcon={
+                                    <SendIcon
+                                        style={{
+                                            fontSize: 15,
+                                            marginTop: "0.3em",
+                                        }}
+                                    />
+                                }
+                            >
+                                send
+                            </Button>
+                            <Button
+                                className="button"
+                                type="reset"
+                                color="secondary"
+                                endIcon={
+                                    <ClearAllIcon
+                                        style={{
+                                            fontSize: 15,
+                                            marginTop: "0.3em",
+                                        }}
+                                    />
+                                }
+                            >
+                                clear
+                            </Button>
+                        </ButtonGroup>
                         <div>{mailStatus}</div>
                     </Form>
                 )}

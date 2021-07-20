@@ -73,6 +73,6 @@ export const ProfileData = [
     {
         id: "linkedin",
         icon: LinkedInIcon,
-        url: "https://www.linkedin.com/in/yesu-babu-10403a15b/",
+        url: "https://www.linkedin.com/in/yesu4658/",
     },
 ];
