@@ -2,6 +2,7 @@ import Head from "next/head";
 import Profile from "../ui/Profile";
 import Contact from "../ui/Contact";
 import Card from "../ui/Card";
+import { TechList, TechStack } from "../ui/Tech";
 
 export default function Home() {
     return (
@@ -16,9 +17,11 @@ export default function Home() {
             </Head>
 
             <main>
-                <Profile />
-                <Card />
-                <Contact />
+                <Profile key="Profile" />
+                <TechList key="Techlist" />
+                <Card key="Card" />
+                <Contact key="Contact" />
+                <TechStack key="Techstack" />
             </main>
         </>
     );

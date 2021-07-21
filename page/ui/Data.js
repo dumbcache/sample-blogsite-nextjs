@@ -4,52 +4,95 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import TwitterIcon from "@material-ui/icons/Twitter";
 
+import html from "../public/assets/html.png";
+import css from "../public/assets/css.png";
+import js from "../public/assets/js.png";
+import react from "../public/assets/react.png";
+import nextjs from "../public/assets/nextjs.svg";
+import mongodb from "../public/assets/mongo.svg";
+import node from "../public/assets/node.png";
+import python from "../public/assets/python.png";
+import docker from "../public/assets/docker.png";
+import git from "../public/assets/git.png";
+import github from "../public/assets/github.png";
+
 export const TechData = [
     {
+        id: 1,
+        data: "html",
+        alt: "html",
+        image: html,
+        stack: false,
+    },
+    {
         id: 2,
-        data: "Docker",
-        alt: "Docker",
-        url: "https://www.docker.com/",
+        data: "css",
+        alt: "css",
+        image: css,
+        stack: false,
     },
     {
         id: 3,
-        data: "Mongodb",
-        alt: "Mongodb",
-        url: "https://www.mongodb.com/",
+        data: "js",
+        alt: "js",
+        image: js,
+        stack: false,
     },
     {
         id: 4,
-        data: "React",
-        alt: "React",
-        url: "https://reactjs.org/",
+        data: "python",
+        alt: "python",
+        image: python,
+        stack: false,
     },
     {
         id: 5,
-        data: "aws",
+        data: "React",
+        alt: "React",
+        image: react,
+        stack: true,
     },
     {
         id: 6,
-        data: "git",
+        data: "nextJS",
+        alt: "nextJS",
+        image: nextjs,
+        stack: false,
     },
     {
         id: 7,
-        data: "python",
+        data: "node",
+        alt: "node",
+        image: node,
+        stack: true,
     },
     {
         id: 8,
-        data: "nextJS",
+        data: "Mongodb",
+        alt: "Mongodb",
+        image: mongodb,
+        stack: true,
     },
     {
         id: 9,
-        data: "JavaScript",
+        data: "Docker",
+        alt: "Docker",
+        image: docker,
+        stack: true,
     },
     {
         id: 10,
-        data: "html",
+        data: "git",
+        alt: "git",
+        image: git,
+        stack: true,
     },
     {
         id: 11,
-        data: "css",
+        data: "github",
+        alt: "github",
+        image: github,
+        stack: true,
     },
 ];
 
