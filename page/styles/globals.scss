@@ -27,7 +27,8 @@ body {
     margin: 0;
     color: rgb(255, 255, 255);
     // background-color: #2b2e2f;
-    background-color: #212121;
+    // background-color: #212121;
+    background-color: #2c203f;
     font-family: "Poiret One";
 }
 body::-webkit-scrollbar {
@@ -265,7 +266,13 @@ a {
             transition: all 1s;
         }
         > div:hover {
-            transform: rotateZ(-40deg) translate(-100px, 0) rotateZ(40deg);
+            transform: translate(-150px, 0px);
+
+            box-shadow: 0px 0px 10px black;
+        }
+        > div:nth-child(even):hover {
+            transform: translate(150px, 0px);
+            box-shadow: 0px 0px 25px black;
         }
 
         div:nth-child(1) {
