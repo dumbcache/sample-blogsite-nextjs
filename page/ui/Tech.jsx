@@ -12,6 +12,7 @@ export const TechList = () => {
                             src={item.image}
                             unoptimized={true}
                             alt={item.alt}
+                            title={item.data}
                         />
                     </div>
                 ))}
@@ -27,11 +28,14 @@ export const TechStack = () => {
                 <div className="techstack-innercontainer">
                     {StackData.map((item) => (
                         <div key={item.id} className={item.data}>
-                            <Image
-                                src={item.image}
-                                unoptimized={true}
-                                alt={item.alt}
-                            />
+                            <div className="stackcard">
+                                <Image
+                                    src={item.image}
+                                    unoptimized={true}
+                                    alt={item.alt}
+                                />
+                                <span>{item.data}</span>
+                            </div>
                         </div>
                     ))}
                 </div>

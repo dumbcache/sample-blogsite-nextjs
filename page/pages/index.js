@@ -19,9 +19,9 @@ export default function Home() {
             <main>
                 <Profile key="Profile" />
                 <TechList key="Techlist" />
-                <Card key="Card" />
-                <Contact key="Contact" />
                 <TechStack key="Techstack" />
+                {/* <Card key="Card" /> */}
+                <Contact key="Contact" />
             </main>
         </>
     );

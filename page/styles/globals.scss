@@ -62,7 +62,7 @@ a {
     // background-size: cover;
     background-position: top;
 
-    box-shadow: 0px 2px 1px rgb(73, 70, 70);
+    box-shadow: 0px 1px 1px rgb(73, 70, 70);
     z-index: 10;
 
     > div {
@@ -132,7 +132,7 @@ a {
     #bio {
         margin: auto;
         margin-top: 110px;
-        margin-bottom: 2%;
+        // margin-bottom: 2%;
         padding: 1em;
         background-color: #141414;
         display: flex;
@@ -250,9 +250,10 @@ a {
     .techstack-innercontainer {
         // background-color: rgb(36, 184, 184);
         margin: auto;
+        margin-top: 2em;
         position: relative;
         width: 150px;
-        height: 400px;
+        height: 350px;
 
         > div {
             background-color: #141414;
@@ -269,13 +270,13 @@ a {
             z-index: 7;
             top: -25px;
             transform: translate(0px, 0px);
-            box-shadow: -5px 5px 5px black;
+            box-shadow: -5px 5px 5px 1px black;
         }
         > div:nth-child(even):hover {
             top: 0px;
-            z-index: 7;
             transform: translate(0px, 0px);
-            box-shadow: -5px 5px 5px black;
+            z-index: 7;
+            box-shadow: -5px 5px 5px 1px black;
         }
 
         div:nth-child(1) {
@@ -300,6 +301,16 @@ a {
         }
         div:nth-child(6) {
             top: 125px;
+        }
+        .stackcard {
+            text-align: right;
+            position: relative;
+            span {
+                z-index: 6;
+                position: absolute;
+                bottom: 0;
+                right: 0%;
+            }
         }
     }
 }

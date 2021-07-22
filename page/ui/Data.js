@@ -111,7 +111,7 @@ export const ProfileData = [
     {
         id: "instagram",
         icon: InstagramIcon,
-        url: "https://www.instagram.com/yesu_4658/",
+        url: "https://www.instagram.com/yesu4658/",
     },
     {
         id: "linkedin",
