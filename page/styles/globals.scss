@@ -28,7 +28,7 @@ body {
     color: rgb(255, 255, 255);
     // background-color: #2b2e2f;
     // background-color: #212121;
-    background-color: #2c203f;
+    background-color: #221731;
     font-family: "Poiret One";
 }
 body::-webkit-scrollbar {
@@ -265,14 +265,17 @@ a {
             transform: rotateZ(-40deg) rotateX(30deg);
             transition: all 1s;
         }
-        > div:hover {
-            transform: translate(-150px, 0px);
-
-            box-shadow: 0px 0px 10px black;
+        > div:nth-child(odd):hover {
+            z-index: 7;
+            top: -25px;
+            transform: translate(0px, 0px);
+            box-shadow: -5px 5px 5px black;
         }
         > div:nth-child(even):hover {
-            transform: translate(150px, 0px);
-            box-shadow: 0px 0px 25px black;
+            top: 0px;
+            z-index: 7;
+            transform: translate(0px, 0px);
+            box-shadow: -5px 5px 5px black;
         }
 
         div:nth-child(1) {
@@ -380,6 +383,23 @@ a {
             width: 80%;
         }
     }
+    // .techstack-outercontainer {
+    //     .techstack-innercontainer {
+    //         margin: auto;
+    //         position: relative;
+    //         width: 100px;
+    //         height: 400px;
+    //         > div {
+    //             height: 100px;
+    //         }
+    //         > div:hover {
+    //             transform: translate(-100px, 0px);
+    //         }
+    //         > div:nth-child(even):hover {
+    //             transform: translate(100px, 0px);
+    //         }
+    //     }
+    // }
 }
 
 @media only screen and (min-width: 0px) and (max-width: 330px) {
