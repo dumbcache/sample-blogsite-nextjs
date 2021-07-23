@@ -13,7 +13,7 @@ export const TechList = () => {
                             unoptimized={true}
                             alt={item.alt}
                         />
-                        <span class="hovertip">{item.data}</span>
+                        <span className="hovertip">{item.data}</span>
                     </div>
                 ))}
             </div>
