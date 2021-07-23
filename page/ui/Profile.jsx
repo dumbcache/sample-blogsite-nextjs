@@ -13,7 +13,7 @@ const Profile = () => {
                     <div>
                         <h2 id="name">Yesu Babu .G</h2>
                     </div>
-                    <h3>age:22</h3>
+                    <h4>age:22</h4>
                     <h5>(Full-stack Developer)</h5>
                     <p>|--------- Bio ---------|</p>
                     <p>

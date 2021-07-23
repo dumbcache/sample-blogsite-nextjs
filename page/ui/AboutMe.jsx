@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const AboutMe = () => {
     return (
         <>
@@ -10,8 +12,28 @@ const AboutMe = () => {
                     learner)
                 </p>
                 <h6>Currently Working on</h6>
-                <p>stackUp</p>
-                <p>lookUp</p>
+                <ul style={{ margin: "0" }}>
+                    <li>
+                        <Link href="https://github.com/yesu4658/project-StackUP">
+                            <a target="_blank">stackUp</a>
+                        </Link>
+                        <small
+                            style={{ fontSize: "0.7rem", fontWeight: "normal" }}
+                        >
+                            {"(data stacking app)"}
+                        </small>
+                    </li>
+                    <li>
+                        <Link href="https://github.com/yesu4658/project-LOOK">
+                            <a target="_blank">look</a>
+                        </Link>
+                        <small
+                            style={{ fontSize: "0.7rem", fontWeight: "normal" }}
+                        >
+                            {"(data provider app)"}
+                        </small>
+                    </li>
+                </ul>
             </div>
         </>
     );

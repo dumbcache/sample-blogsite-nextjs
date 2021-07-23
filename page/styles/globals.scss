@@ -1,4 +1,4 @@
-// @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 
 @font-face {
     font-family: "Poiret One";
@@ -30,6 +30,7 @@ body {
     // background-color: #212121;
     background-color: #221731;
     font-family: "Poiret One";
+    font-weight: bold;
 }
 body::-webkit-scrollbar {
     display: none;
@@ -141,7 +142,7 @@ a {
         width: 80vw;
         font-family: "Poiret One";
         h2,
-        h3,
+        h4,
         h5 {
             color: darkturquoise;
             margin: 5px;
@@ -320,14 +321,18 @@ a {
     width: 80vw;
     font-family: "Poiret One";
     h2,
-    h4,
-    h6 {
+    h4 {
         color: darkturquoise;
         margin: 5px;
         text-align: center;
     }
+    h6 {
+        color: darkturquoise;
+        margin: 1em auto;
+    }
     p {
         margin: 0;
+        width: 80%;
         text-align: center;
     }
 }
@@ -420,6 +425,9 @@ a {
     .aboutme-container {
         width: 90vw;
         margin: 5% auto;
+        p {
+            width: initial;
+        }
     }
     .techlist-container {
         width: 90vw;
