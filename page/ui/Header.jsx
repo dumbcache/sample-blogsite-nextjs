@@ -10,7 +10,7 @@ const Header = () => {
                 <div className="title-container">
                     <img src="/saitama.png" alt="saitama" id="logo" />
                     <h1 id="title">
-                        Site:<small>)</small>OPM
+                        Site:<small>{")"}</small>OPM
                     </h1>
                 </div>
                 <div className="navigation-container">

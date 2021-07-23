@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Profile from "../ui/Profile";
+import AboutMe from "../ui/AboutMe";
 import Contact from "../ui/Contact";
 import Card from "../ui/Card";
 import { TechList, TechStack } from "../ui/Tech";
@@ -20,6 +21,7 @@ export default function Home() {
                 <Profile key="Profile" />
                 <TechList key="Techlist" />
                 <TechStack key="Techstack" />
+                <AboutMe ke="Aboutme" />
                 {/* <Card key="Card" /> */}
                 <Contact key="Contact" />
             </main>

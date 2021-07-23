@@ -12,8 +12,8 @@ export const TechList = () => {
                             src={item.image}
                             unoptimized={true}
                             alt={item.alt}
-                            title={item.data}
                         />
+                        <span class="hovertip">{item.data}</span>
                     </div>
                 ))}
             </div>
@@ -25,6 +25,9 @@ export const TechStack = () => {
     return (
         <>
             <div className="techstack-outercontainer">
+                <div className="stack-title">
+                    <h4>Favourite Stack</h4>
+                </div>
                 <div className="techstack-innercontainer">
                     {StackData.map((item) => (
                         <div key={item.id} className={item.data}>

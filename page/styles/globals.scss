@@ -166,9 +166,34 @@ a {
     background-color: #141414;
     align-items: center;
     > div {
+        position: relative;
         flex: auto;
         width: 5%;
         padding: 0.2em;
+        text-align: center;
+        .hovertip {
+            width: 100%;
+            font-size: 0.6rem;
+            font-weight: bold;
+            position: absolute;
+            top: 120%;
+            left: 0%;
+            display: none;
+        }
+        .hovertip::after {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 30%;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent rgb(38, 202, 207) transparent;
+        }
+    }
+    div:hover {
+        .hovertip {
+            display: initial;
+        }
     }
 }
 
@@ -208,49 +233,19 @@ a {
     }
 }
 
-.contact-container {
-    padding: 1rem;
-    margin: 1rem auto;
-    // background-color: #212121;
-    background-color: #141414;
-    font-family: inherit;
-    font-weight: bold;
-    width: 80vw;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-
-    h4 {
-        margin: 1rem 0;
-        text-align: center;
-    }
-    form {
-        width: 50%;
-        text-align: center;
-    }
-
-    .button {
-        font-family: inherit;
-        font-weight: bold;
-        // background-color: #50a9af;
-        // color: #fff;
-        box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11),
-            0 1px 3px rgba(0, 0, 0, 0.08);
-        text-transform: inherit;
-        margin-top: 0.5rem;
-        width: 100%;
-    }
-    // .button:hover {
-    //     background-color: #5469d4;
-    // }
-}
-
 .techstack-outercontainer {
     // background-color: #491d1d;
+    .stack-title {
+        h4 {
+            padding-top: 1em;
+            color: #61dafb;
+        }
+        text-align: center;
+    }
     .techstack-innercontainer {
         // background-color: rgb(36, 184, 184);
         margin: auto;
-        margin-top: 2em;
+        margin-top: 3em;
         position: relative;
         width: 150px;
         height: 350px;
@@ -282,6 +277,7 @@ a {
         div:nth-child(1) {
             top: 0px;
             z-index: 6;
+            color: #61dafb;
         }
         div:nth-child(2) {
             top: 25px;
@@ -313,6 +309,65 @@ a {
             }
         }
     }
+}
+.aboutme-container {
+    margin: auto;
+    padding: 1em;
+    background-color: #141414;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    width: 80vw;
+    font-family: "Poiret One";
+    h2,
+    h4,
+    h6 {
+        color: darkturquoise;
+        margin: 5px;
+        text-align: center;
+    }
+    p {
+        margin: 0;
+        text-align: center;
+    }
+}
+
+.contact-container {
+    padding: 1rem;
+    margin: 1rem auto;
+    // background-color: #212121;
+    background-color: #141414;
+    font-family: inherit;
+    font-weight: bold;
+    width: 80vw;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    h4 {
+        color: darkturquoise;
+        margin: 1rem 0;
+        text-align: center;
+    }
+    form {
+        width: 50%;
+        text-align: center;
+    }
+
+    .button {
+        font-family: inherit;
+        font-weight: bold;
+        // background-color: #50a9af;
+        // color: #fff;
+        box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11),
+            0 1px 3px rgba(0, 0, 0, 0.08);
+        text-transform: inherit;
+        margin-top: 0.5rem;
+        width: 100%;
+    }
+    // .button:hover {
+    //     background-color: #5469d4;
+    // }
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -359,11 +414,20 @@ a {
         #bio {
             width: 90vw;
             margin-top: 22%;
-            margin-bottom: 5%;
+            // margin-bottom: 5%;
         }
+    }
+    .aboutme-container {
+        width: 90vw;
+        margin: 5% auto;
     }
     .techlist-container {
         width: 90vw;
+        > div {
+            .hovertip::after {
+                left: 40%;
+            }
+        }
     }
 
     .card-innercontainer {
@@ -394,23 +458,6 @@ a {
             width: 80%;
         }
     }
-    // .techstack-outercontainer {
-    //     .techstack-innercontainer {
-    //         margin: auto;
-    //         position: relative;
-    //         width: 100px;
-    //         height: 400px;
-    //         > div {
-    //             height: 100px;
-    //         }
-    //         > div:hover {
-    //             transform: translate(-100px, 0px);
-    //         }
-    //         > div:nth-child(even):hover {
-    //             transform: translate(100px, 0px);
-    //         }
-    //     }
-    // }
 }
 
 @media only screen and (min-width: 0px) and (max-width: 330px) {
@@ -455,10 +502,17 @@ a {
     }
     .profile-container {
         #bio {
-            width: 90vw;
+            width: 100vw;
             margin-top: 20%;
-            margin-bottom: 5%;
+            // margin-bottom: 5%;
         }
+    }
+    .techlist-container {
+        width: 100vw;
+    }
+    .aboutme-container {
+        width: 100vw;
+        margin: 5% auto;
     }
 
     .card-innercontainer {
@@ -479,7 +533,7 @@ a {
         }
     }
     .contact-container {
-        width: 90vw;
+        width: 100vw;
         form {
             width: 90%;
         }
