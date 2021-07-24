@@ -323,9 +323,14 @@ a {
         color: darkturquoise;
         margin: 1em auto;
     }
+    // p {
+    //     margin: 0;
+    //     width: 80%;
+    //     text-align: center;
+    // }
     p {
         margin: 0;
-        width: 80%;
+        margin-bottom: 0.5em;
         text-align: center;
     }
 }
@@ -423,7 +428,7 @@ a {
         }
     }
     .techlist-container {
-        width: 90vw;
+        width: 100%;
         > div {
             .hovertip::after {
                 left: 40%;
@@ -509,7 +514,7 @@ a {
         }
     }
     .techlist-container {
-        width: 100vw;
+        width: 100%;
     }
     .aboutme-container {
         width: 100vw;

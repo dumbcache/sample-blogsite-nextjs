@@ -1,5 +1,5 @@
-import LocationCityIcon from "@material-ui/icons/LocationCity";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
+import { TechList } from "./Tech";
 
 const Profile = () => {
     return (
@@ -30,19 +30,9 @@ const Profile = () => {
                         vijayawada,
                         <small style={{ fontWeight: "normal" }}>(India)</small>
                     </p>
-                    <p>|--------- Bio ---------|</p>
-                    <p>
-                        <i>
-                            ``` May be a fresher but will be professional in no
-                            time ```
-                        </i>
-                    </p>
+                    <p>|--------- Tech Knowledge ---------|</p>
 
-                    <ul>
-                        <li>loves cricket</li>
-                        <li>watching anime &#128512;</li>
-                        <li>music</li>
-                    </ul>
+                    <TechList />
                 </div>
             </div>
         </div>

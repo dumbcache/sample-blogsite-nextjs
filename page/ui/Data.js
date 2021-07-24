@@ -10,6 +10,7 @@ import js from "../public/assets/js.png";
 import react from "../public/assets/react.png";
 import nextjs from "../public/assets/nextjs.svg";
 import mongodb from "../public/assets/mongo.svg";
+import aws from "../public/assets/aws.svg";
 import node from "../public/assets/node.png";
 import python from "../public/assets/python.png";
 import docker from "../public/assets/docker.png";
@@ -82,13 +83,20 @@ export const TechData = [
     },
     {
         id: 10,
+        data: "aws",
+        alt: "aws",
+        image: aws,
+        stack: false,
+    },
+    {
+        id: 11,
         data: "git",
         alt: "git",
         image: git,
         stack: true,
     },
     {
-        id: 11,
+        id: 12,
         data: "github",
         alt: "github",
         image: github,
