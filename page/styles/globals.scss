@@ -4,23 +4,7 @@
     font-family: "Poiret One";
     src: local("Poiret One"), url(/fonts/PoiretOne-Regular.ttf);
 }
-// @font-face {
-//     font-family: "Architects Daughter";
-//     src: local("Architects Daughter"),
-//         url(/fonts/ArchitectsDaughter-Regular.ttf);
-// }
-// @font-face {
-//     font-family: "Coiny";
-//     src: local("Coiny"), url(/fonts/Coiny-Regular.ttf);
-// }
-// @font-face {
-//     font-family: "Vollkorn";
-//     src: local("Vollkorn"), url(/fonts/Vollkorn-VariableFont_wght.ttf);
-// }
-// @font-face {
-//     font-family: "Yatra One";
-//     src: local("Yatra One"), url(/fonts/YatraOne-Regular.ttf);
-// }
+
 html,
 body {
     padding: 0;
@@ -28,7 +12,15 @@ body {
     color: rgb(255, 255, 255);
     // background-color: #2b2e2f;
     // background-color: #212121;
-    background-color: #221731;
+    // background-color: #221731;
+    background-color: #1d142a;
+    background-image: linear-gradient(
+        #1d142a,
+        #1d142a,
+        #4a50a7,
+        #1d142a,
+        #4a50a7
+    );
     font-family: "Poiret One";
     font-weight: bold;
 }
@@ -153,6 +145,7 @@ a {
         }
         p {
             margin: 0;
+            margin-bottom: 0.5em;
             text-align: center;
         }
     }
@@ -161,7 +154,7 @@ a {
 .techlist-container {
     margin: auto;
     margin-bottom: 1em;
-    width: 40vw;
+    width: 50vw;
     display: flex;
     flex-flow: row wrap;
     background-color: #141414;
@@ -248,15 +241,15 @@ a {
         margin: auto;
         margin-top: 3em;
         position: relative;
-        width: 150px;
-        height: 350px;
+        width: 200px;
+        height: 400px;
 
         > div {
             background-color: #141414;
             position: absolute;
             // left: 50%;
             flex: auto;
-            height: 150px;
+            height: 200px;
             padding: 0.2em;
             box-shadow: -5px 0px 5px black, -5px 0px 5px black;
             transform: rotateZ(-40deg) rotateX(30deg);
