@@ -17,7 +17,7 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <main>
+            <main className="main">
                 <Profile key="Profile" />
                 {/* <TechList key="Techlist" /> */}
                 <TechStack key="Techstack" />
