@@ -13,7 +13,7 @@ oauth2Client.setCredentials({
 const accessToken = oauth2Client.getAccessToken();
 
 export default async (req, res) => {
-    console.log(req.body);
+    // console.log(req.body);
     let data = req.body;
     var Transport = nodemailer.createTransport({
         service: "gmail",
@@ -46,11 +46,9 @@ export default async (req, res) => {
     };
     Transport.sendMail(mailOptions, (error, info) => {
         if (error) {
-            console("inside error");
             console.log(error);
             res.status(500).send("internal error....please try again later");
         } else {
-            console.log("inside else");
             console.log("Message sent: %s", info.messageId);
             res.status(200).send("message sent successfully");
         }
