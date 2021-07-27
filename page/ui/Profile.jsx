@@ -31,7 +31,13 @@ const Profile = () => {
                         <small style={{ fontWeight: "normal" }}>(India)</small>
                     </p>
                     <p>|--------- Tech Knowledge ---------|</p>
-
+                    {/* <p style={{ fontWeight: "normal" }}>
+                        good Knowledge : html, react, javascript, react,
+                        node,python
+                    </p>
+                    <p style={{ fontWeight: "normal" }}>
+                        basic Knowledge : nextjs, docker, aws, git, github
+                    </p> */}
                     <TechList />
                 </div>
             </div>

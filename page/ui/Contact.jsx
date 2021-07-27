@@ -110,7 +110,12 @@ const Contact = () => {
                 validationSchema={yup.object({
                     name: yup.string(),
                     email: yup.string().email(),
-                    mobile: yup.number().typeError("number is required"),
+                    mobile: yup
+                        .string()
+                        .required()
+                        .matches(/^[0-9]+$/, "Must be only numbers")
+                        .min(10, "Must be exactly 10 digits")
+                        .max(10, "Must be exactly 10 digits"),
                     message: yup.string(),
                 })}
             >
@@ -145,6 +150,8 @@ const Contact = () => {
                                 multiline={true}
                             />
                         </div>
+
+                        <div className="mailStatus">{mailStatus}</div>
                         <ButtonGroup
                             disabled={isSubmitting}
                             size="small"
@@ -181,7 +188,6 @@ const Contact = () => {
                                 clear
                             </Button>
                         </ButtonGroup>
-                        <div className="mailStatus">{mailStatus}</div>
                     </Form>
                 )}
             </Formik>

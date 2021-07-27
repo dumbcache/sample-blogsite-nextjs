@@ -79,7 +79,7 @@ export const TechData = [
         data: "Docker",
         alt: "Docker",
         image: docker,
-        stack: true,
+        stack: false,
     },
     {
         id: 10,
