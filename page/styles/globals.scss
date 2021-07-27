@@ -345,6 +345,7 @@ a {
 .contact-container {
     padding: 1rem;
     margin: 1rem auto;
+    margin-bottom: 0em;
     // background-color: #212121;
     background-color: #141414;
     font-family: inherit;
@@ -374,6 +375,9 @@ a {
         text-transform: inherit;
         margin-top: 0.5rem;
         width: 100%;
+    }
+    .mailStatus {
+        margin-bottom: 1rem;
     }
     // .button:hover {
     //     background-color: #5469d4;

@@ -181,7 +181,7 @@ const Contact = () => {
                                 clear
                             </Button>
                         </ButtonGroup>
-                        <div>{mailStatus}</div>
+                        <div className="mailStatus">{mailStatus}</div>
                     </Form>
                 )}
             </Formik>
