@@ -3,16 +3,16 @@ import path from "path";
 import matter from "gray-matter";
 import Image from "next/image";
 import Link from "next/link";
-import styles from "../../styles/Blog.module.scss";
+import styles from "../../styles/Blogs.module.scss";
 
 const blogs = ({ blogs }) => {
     return (
-        <main className={styles.main}>
-            <div className={styles.container}>
+        <div className={styles.container}>
+            <div className={styles.post}>
                 {blogs.map(({ slug, metaData }) => (
                     <div
                         style={{
-                            backgroundColor: "greenyellow",
+                            backgroundColor: "white",
                             marginBottom: "2em",
                         }}
                     >
@@ -21,17 +21,27 @@ const blogs = ({ blogs }) => {
                                 <Image
                                     src={metaData.cover}
                                     width={400}
-                                    height={300}
+                                    height={100}
+                                    layout="responsive"
+                                    blurDataURL={metaData.cover}
+                                    placeholder="blur"
+                                    objectFit="cover"
                                 />
 
-                                <div>{metaData.title}</div>
+                                <h1>{metaData.title}</h1>
+                                <div
+                                    className="postedDate"
+                                    style={{ marginBottom: "0.5em" }}
+                                >
+                                    <small>{metaData.postedDate}</small>
+                                </div>
                                 <div>{metaData.description}</div>
                             </a>
                         </Link>
                     </div>
                 ))}
             </div>
-        </main>
+        </div>
     );
 };
 

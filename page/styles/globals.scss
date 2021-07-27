@@ -1,20 +1,24 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 
 @font-face {
     font-family: "Poiret One";
     src: local("Poiret One"), url(/fonts/PoiretOne-Regular.ttf);
 }
+@font-face {
+    font-family: "Vollkorn";
+    src: local("Vollkorn"), url(/fonts/Vollkorn-VariableFont_wght.ttf);
+}
 
+@font-face {
+    font-family: "Coiny-Regular";
+    src: local("Coiny-Regular"), url(/fonts/Coiny-Regular.ttf);
+}
 html,
 body {
     padding: 0;
     margin: 0;
     color: rgb(255, 255, 255);
-    // background-color: #2b2e2f;
-    // background-color: #212121;
-    // background-color: #221731;
-    background-color: #1d142a;
-
+    background-color: #242424;
     font-family: "Poiret One";
     font-weight: bold;
 }

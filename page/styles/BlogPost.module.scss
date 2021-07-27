@@ -1,0 +1,57 @@
+.container {
+    padding: 2em;
+    width: 70%;
+    min-height: 100vh;
+    color: black;
+    background-color: white;
+    margin: auto;
+    border-left: 1px black solid;
+    border-right: 1px black solid;
+    .post {
+        width: 100%;
+        margin: auto;
+        background-color: white;
+        border: 1px black solid;
+        a {
+            color: inherit;
+        }
+    }
+    h1,
+    h2,
+    h5 {
+        font-family: Coiny-Regular;
+    }
+    h6 {
+        margin: 0;
+        margin-left: 1em;
+    }
+    p {
+        color: #464646;
+        margin-top: 0;
+    }
+    pre {
+        overflow-x: scroll;
+        font-weight: normal;
+        color: white;
+        background-color: #212121;
+        padding: 1em;
+        overflow-x: scroll;
+        overflow-y: scroll;
+        max-height: 400px;
+    }
+    code {
+        color: #d1d1d1;
+        font-weight: bold;
+        font-family: "Poiret one";
+    }
+    pre::-webkit-scrollbar {
+        display: none;
+    }
+    img {
+        width: 100%;
+        // filter: blur(5px);
+    }
+    a {
+        color: blue;
+    }
+}
