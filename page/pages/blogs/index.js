@@ -8,26 +8,20 @@ import styles from "../../styles/Blogs.module.scss";
 const blogs = ({ blogs }) => {
     return (
         <div className={styles.container}>
-            <div className={styles.post}>
-                {blogs.map(({ slug, metaData }) => (
-                    <div
-                        style={{
-                            backgroundColor: "white",
-                            marginBottom: "2em",
-                        }}
-                    >
-                        <Link href={`/blogs/${slug}`}>
-                            <a>
-                                <Image
-                                    src={metaData.cover}
-                                    width={400}
-                                    height={100}
-                                    layout="responsive"
-                                    blurDataURL={metaData.cover}
-                                    placeholder="blur"
-                                    objectFit="cover"
-                                />
-
+            {blogs.map(({ slug, metaData }) => (
+                <div className={styles.posts}>
+                    <Link href={`/blogs/${slug}`}>
+                        <a>
+                            <Image
+                                src={metaData.cover}
+                                width={400}
+                                height={100}
+                                layout="responsive"
+                                blurDataURL={metaData.cover}
+                                placeholder="blur"
+                                objectFit="cover"
+                            />
+                            <div className={styles.metadata}>
                                 <h1>{metaData.title}</h1>
                                 <div
                                     className="postedDate"
@@ -35,12 +29,12 @@ const blogs = ({ blogs }) => {
                                 >
                                     <small>{metaData.postedDate}</small>
                                 </div>
-                                <div>{metaData.description}</div>
-                            </a>
-                        </Link>
-                    </div>
-                ))}
-            </div>
+                                <p>{metaData.description}</p>
+                            </div>
+                        </a>
+                    </Link>
+                </div>
+            ))}
         </div>
     );
 };
