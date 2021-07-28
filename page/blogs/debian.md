@@ -26,7 +26,7 @@ sudo dmesg
 
 In my case there were many errors due to the absence of relavant drivers lile wifi and bluetooth etc.
 
-## upadating sources.list file
+## Upadating sources.list file
 
 The file '/etc/apt/sources.list' in Debian contains the list of the 'sources' from which the packages can be obtained.
 
@@ -66,7 +66,7 @@ sudo apt install firmware-iwlwifi
 sudo apt install firmware-realtek
 ```
 
-## updating grub file
+## Updating grub file
 
 According to [docs](https://www.kernel.org/doc/html/v4.14/admin-guide/kernel-parameters.html),pci=noaer supresses the pci advanced error reporting which you see when using **dmesg** command.
 
@@ -138,88 +138,8 @@ mkdir -p ~/.config/fusuma
 nano ~/.config/fusuma/config.yml
 ```
 
-config.yml
-
-```yml
-swipe:
-    3:
-        right:
-            command: "xdotool key alt+Tab" # switch between applications
-        left:
-            command: "xdotool key alt+Shift+Tab" # switch between applications reverse
-        up:
-            command: "xdotool key Control_L+F10" # Workspace overview
-            keypress:
-                LEFTSHIFT:
-                    window:
-                        maximized: "toggle" # Toggle Maximize/Unmaximize Window
-        down:
-            command: "xdotool key super+Shift+d" # minimize all applications
-            keypress:
-                LEFTSHIFT:
-                    window: "close"
-    4:
-        left:
-            workspace: "next" # Switch to next workspace
-            keypress:
-                LEFTSHIFT:
-                    window: "next" # Move window to next workspace
-                LEFTMETA:
-                    command: "xdotool key --clearmodifiers super+ctrl+Left" # Move window to left side
-        right:
-            workspace: "prev" # Switch to previous workspace
-            keypress:
-                LEFTSHIFT:
-                    window: "prev" # Move window to previous workspace
-                LEFTMETA:
-                    command: "xdotool key --clearmodifiers super+ctrl+Right" # Move window to right side
-        up:
-            command: "xdotool key super+w" # desktops overview
-            keypress:
-                LEFTSHIFT:
-                    window:
-                        maximized: "toggle" # Toggle Maximize/Unmaximize Window
-        down:
-            command: "xdotool key Shift_L+Alt_L+Tab" #switch to other applications
-            keypress:
-                LEFTSHIFT:
-                    window: "close" # Close window
-
-pinch:
-    2:
-        in:
-            command: "xdotool keydown ctrl click 4 keyup ctrl" # Zoom in
-        out:
-            command: "xdotool keydown ctrl click 5 keyup ctrl" # Zoom out
-    4:
-        in:
-            command: "xdotool key super+a" # Window overview
-        out:
-            command: "xdotool key super+s" # Workspace overview
-
-rotate:
-    3:
-        clockwise:
-            command: "xdotool key XF86MonBrightnessUp" # Brightness up
-        counterclockwise:
-            command: "xdotool key XF86MonBrightnessDown" # Brightness down
-    4:
-        clockwise:
-            command: "xdotool key XF86AudioRaiseVolume" # Volume up
-        counterclockwise:
-            command: "xdotool key XF86AudioLowerVolume" # Volume down
-
-plugin:
-    inputs:
-        libinput_command_input: # options for lib/plugin/inputs/libinput_command_input
-            enable-tap: true # click to tap
-            enable-dwt: true # disable tap while typing
-            show-keycodes: true
-# Require to install following plugins
-
-# https://github.com/iberianpig/fusuma-plugin-wmctrl
-# https://github.com/iberianpig/fusuma-plugin-keypress
-```
+Here is the config file that i use for fusuma.  
+[config.yml](https://gist.github.com/yesu4658/ff574edf3740bdef5894e5c1d0ab01da)
 
 In order to above config file to work you need to install [fusuma-plugin-keypress](https://github.com/iberianpig/fusuma-plugin-keypress) and [fusuma-plugin-wmctrl](https://github.com/iberianpig/fusuma-plugin-wmctrl).
 

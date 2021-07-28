@@ -32,9 +32,9 @@ export default async (req, res) => {
         },
     });
     var mailOptions = {
-        from: ' "Site:)OPM" <yesubabu.gudi@gmail.com> ',
-        to: "<yesubabu.gudi@gmail.com>,<gunther1817@gmail.com>",
-        subject: "Site:)OPM user contact",
+        from: `Site:)OPM" ${process.env.MY_MAIL} `,
+        to: `${process.env.MY_MAIL}`,
+        subject: "Site:)OPM user contact details",
         html: `<div style="color:white;background-color:#212121;min-height:50vh;padding:1rem;"><h4 style="margin:0;">Hey there! </h4><br/> 
             <div >
             <div><b>name</b>  :  ${data.name}</div>

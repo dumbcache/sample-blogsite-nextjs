@@ -54,7 +54,7 @@ const AboutMe = () => {
                     </li>
                 </ul>
                 <h6>Currently Working on</h6>
-                <ul style={{ margin: "0" }}>
+                <ul>
                     <li>
                         <Link href="https://github.com/yesu4658/project-StackUP">
                             <a target="_blank">stackUp </a>
