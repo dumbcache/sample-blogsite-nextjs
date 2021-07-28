@@ -8,10 +8,9 @@ const AboutMe = () => {
         <>
             <div className="aboutme-container">
                 <h4>AboutME</h4>
-                <p style={{ fontWeight: "normal" }}>
+                <p style={{ fontWeight: "normal", fontSize: "0.9rem" }}>
                     <i>
-                        ``` May be a fresher but will be professional in no time
-                        ```
+                        ``` I'll Leave Tomorrow’s Problems To Tomorrow's Me. ```
                     </i>
                 </p>
                 <p>
@@ -53,7 +52,7 @@ const AboutMe = () => {
                         />
                     </li>
                 </ul>
-                <h6>Currently Working on</h6>
+                {/* <h6>Currently Working on</h6>
                 <ul>
                     <li>
                         <Link href="https://github.com/yesu4658/project-StackUP">
@@ -75,7 +74,7 @@ const AboutMe = () => {
                             {"(data provider app)"}
                         </small>
                     </li>
-                </ul>
+                </ul> */}
             </div>
         </>
     );
