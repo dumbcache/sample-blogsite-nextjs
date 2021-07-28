@@ -93,12 +93,9 @@ a {
     color: #eabd64;
 
     div {
-        padding: 1em;
+        padding: 0 1em;
     }
-    a {
-        padding: 1em 0em;
-        padding-left: 1em;
-    }
+
     a:hover {
         color: #78836c;
     }
@@ -330,11 +327,6 @@ a {
         color: darkturquoise;
         margin: 1em auto;
     }
-    // p {
-    //     margin: 0;
-    //     width: 80%;
-    //     text-align: center;
-    // }
     p {
         margin: 0;
         margin-bottom: 0.5em;
@@ -368,8 +360,6 @@ a {
     .button {
         font-family: inherit;
         font-weight: bold;
-        // background-color: #50a9af;
-        // color: #fff;
         box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11),
             0 1px 3px rgba(0, 0, 0, 0.08);
         text-transform: inherit;
@@ -379,9 +369,6 @@ a {
     .mailStatus {
         margin-bottom: 1rem;
     }
-    // .button:hover {
-    //     background-color: #5469d4;
-    // }
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -398,32 +385,28 @@ a {
 
 @media (min-width: 300px) and (max-width: 700px) {
     .header {
+        padding-bottom: 0.2em;
         flex-flow: row wrap;
         > div {
             flex: auto;
         }
-    }
 
-    .title-container {
-        img {
-            width: 15%;
-            border-radius: 30%;
+        .title-container {
+            img {
+                width: 20%;
+                border-radius: 30%;
+            }
         }
     }
 
     .cover {
         height: 30vh;
         #profile {
-            width: 40%;
+            width: 30%;
             border-radius: 50%;
         }
     }
-    .navigation-container > div {
-        padding: 1em 1em 1em 0em;
-    }
-    .social-container > div {
-        padding: 1em 0em 1em 0em;
-    }
+
     .profile-container {
         #bio {
             width: 90vw;
@@ -478,35 +461,6 @@ a {
 }
 
 @media only screen and (min-width: 0px) and (max-width: 330px) {
-    .header {
-        flex-flow: column;
-
-        .title-container {
-            img {
-                width: 30%;
-                border-radius: 30%;
-            }
-
-            #title {
-                margin: 0;
-            }
-        }
-        .navigation-container {
-            div {
-                padding: 0.5em;
-            }
-            a {
-                padding: 0.5em 0em;
-                padding-right: 1em;
-            }
-            a:hover {
-                color: #78836c;
-            }
-        }
-        .social-container > div {
-            padding: 0.5em 0.5em;
-        }
-    }
     .cover {
         height: 20vh;
         #profile {
