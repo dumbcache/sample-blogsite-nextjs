@@ -1,16 +1,16 @@
 import nodemailer from "nodemailer";
-import { google } from "googleapis";
+// import { google } from "googleapis";
 
-const OAuth2 = google.auth.OAuth2;
-const oauth2Client = new OAuth2(
-    process.env.MY_OAUTH_CLIENT_ID,
-    process.env.MY_OAUTH_CLIENT_SECRET,
-    process.env.MY_OAUTH_REDIRECT_URL
-);
-oauth2Client.setCredentials({
-    refresh_token: process.env.MY_OAUTH_REFRESH_TOKEN,
-});
-const accessToken = oauth2Client.getAccessToken();
+// const OAuth2 = google.auth.OAuth2;
+// const oauth2Client = new OAuth2(
+//     process.env.MY_OAUTH_CLIENT_ID,
+//     process.env.MY_OAUTH_CLIENT_SECRET,
+//     process.env.MY_OAUTH_REDIRECT_URL
+// );
+// oauth2Client.setCredentials({
+//     refresh_token: process.env.MY_OAUTH_REFRESH_TOKEN,
+// });
+// const accessToken = oauth2Client.getAccessToken();
 
 export default async (req, res) => {
     // console.log(req.body);
@@ -20,19 +20,17 @@ export default async (req, res) => {
         host: "smtp.gmail.com",
         port: 2525,
         auth: {
-            type: "OAuth2",
+            // type: "OAuth2",
             user: process.env.MY_GMAIL_USERNAME,
-            clientId: process.env.MY_OAUTH_CLIENT_ID,
-            clientSecret: process.env.MY_OAUTH_CLIENT_SECRET,
-            refreshToken: process.env.MY_OAUTH_REFRESH_TOKEN,
-            accessToken: accessToken,
-        },
-        tls: {
-            rejectUnauthorized: false,
+            pass: process.env.MY_GMAIL_PASS,
+            // clientId: process.env.MY_OAUTH_CLIENT_ID,
+            // clientSecret: process.env.MY_OAUTH_CLIENT_SECRET,
+            // refreshToken: process.env.MY_OAUTH_REFRESH_TOKEN,
+            // accessToken: accessToken,
         },
     });
     var mailOptions = {
-        from: `Site:)OPM" ${process.env.MY_MAIL} `,
+        from: `Site:)OPM" ${process.env.MY_GMAIL_USERNAME} `,
         to: `${process.env.MY_MAIL}`,
         subject: "Site:)OPM user contact details",
         html: `<div style="color:white;background-color:#212121;min-height:50vh;padding:1rem;"><h4 style="margin:0;">Hey there! </h4><br/> 
