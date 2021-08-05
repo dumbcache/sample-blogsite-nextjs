@@ -17,8 +17,8 @@ export default async (req, res) => {
     let data = req.body;
     var Transport = nodemailer.createTransport({
         service: "gmail",
-        host: "smtp.gmail.com",
-        port: 2525,
+        // host: "smtp.gmail.com",
+        // port: 2525,
         auth: {
             // type: "OAuth2",
             user: process.env.MY_GMAIL_USERNAME,
