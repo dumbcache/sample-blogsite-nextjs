@@ -17,12 +17,12 @@ export default async (req, res) => {
     let data = req.body;
     var Transport = nodemailer.createTransport({
         service: "gmail",
-        // host: "smtp.gmail.com",
+        host: "smtp.gmail.com",
         // port: 2525,
         auth: {
             // type: "OAuth2",
-            user: process.env.MY_GMAIL_USERNAME,
-            pass: process.env.MY_GMAIL_PASS,
+            user: "gunther1817@gmail.com",
+            pass: "gunther1817#dumb",
             // clientId: process.env.MY_OAUTH_CLIENT_ID,
             // clientSecret: process.env.MY_OAUTH_CLIENT_SECRET,
             // refreshToken: process.env.MY_OAUTH_REFRESH_TOKEN,
@@ -30,8 +30,8 @@ export default async (req, res) => {
         },
     });
     var mailOptions = {
-        from: `Site:)OPM" ${process.env.MY_GMAIL_USERNAME} `,
-        to: `${process.env.MY_MAIL}`,
+        from: `Site:)OPM" gunther1817@gmail.com`,
+        to: `yesubabu.gudi@gmail.com`,
         subject: "Site:)OPM user contact details",
         html: `<div style="color:white;background-color:#212121;min-height:50vh;padding:1rem;"><h4 style="margin:0;">Hey there! </h4><br/> 
             <div >
