@@ -81,13 +81,13 @@ export const TechData = [
         image: docker,
         stack: false,
     },
-    {
-        id: 10,
-        data: "aws",
-        alt: "aws",
-        image: aws,
-        stack: false,
-    },
+    // {
+    //     id: 10,
+    //     data: "aws",
+    //     alt: "aws",
+    //     image: aws,
+    //     stack: false,
+    // },
     {
         id: 11,
         data: "git",
