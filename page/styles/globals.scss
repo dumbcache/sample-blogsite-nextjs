@@ -254,6 +254,7 @@ a {
             // left: 50%;
             flex: auto;
             height: 200px;
+            width: 200px;
             padding: 0.2em;
             box-shadow: -5px 0px 5px black, -5px 0px 5px black;
             transform: rotateZ(-40deg) rotateX(30deg);
@@ -302,8 +303,7 @@ a {
             span {
                 z-index: 6;
                 position: absolute;
-                bottom: 0;
-                right: 0%;
+                right: 110%;
             }
         }
     }

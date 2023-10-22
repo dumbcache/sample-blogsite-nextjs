@@ -2,17 +2,14 @@
 
 ---
 
-home page
+##### home page
 
+![homepage](https://github.com/dumbcache/sample-blogsite-nextjs/assets/50919263/a938bbc5-1ab7-485e-aa48-2aa6284142b8)
 
-![Screenshot from 2022-03-30 10-29-29](https://user-images.githubusercontent.com/50919263/160755114-fa644852-29a3-48a5-8bdf-bb76f3ed6cdc.png)
+##### blogs page
 
-blogs 
+![blogspage](https://github.com/dumbcache/sample-blogsite-nextjs/assets/50919263/d769d5d9-e83b-4dc1-aef4-45aaece1aa58)
 
+##### single blog page
 
-![Screenshot from 2022-03-30 10-29-57](https://user-images.githubusercontent.com/50919263/160755150-a010a7c0-14f4-4f7a-a183-53fb4f39b166.png)
-
-single blog
-
-
-![Screenshot from 2022-03-30 10-31-13](https://user-images.githubusercontent.com/50919263/160755165-ede4b86a-357b-4a42-be85-54d9c3463081.png)
+![singleblog](https://github.com/dumbcache/sample-blogsite-nextjs/assets/50919263/485fea15-4b13-4804-a8ae-2062709dad6c)
